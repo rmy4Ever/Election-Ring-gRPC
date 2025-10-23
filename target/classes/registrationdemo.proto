@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package com.mycompany.RegistrationDemo.proto;
+
+option java_multiple_files = true;
+option java_package = "com.mycompany.RegistrationDemo.proto";
+option java_outer_classname = "RegistrationDemoProto";
+
+// ---- Identity ----
+message Neighbor { int32 id = 1; string host = 2; int32 port = 3; }
+
+// ---- Lookups / replies ----
+message LookupRequest { int32 id = 1; }
+message SuccessorReply { Neighbor node = 1; }
+
+// ---- Election ----
+message ElectionMsg { int32 candidate_id = 1; }
+message CoordinatorMsg { int32 leader_id = 1; }
+
+// ---- PEX (peer exchange) ----
+message PeerListReply { repeated Neighbor peers = 1; }
+
+// ---- Bootstrap (ring close) ----
+message BootToken {
+  int32 origin = 1;           // who started the token
+  repeated int32 visited = 2; // node ids visited in order
+}
+
+// ---- Local Empty ----
+message Empty {}
+
+service PeerService {
+  rpc Ping(Empty) returns (Empty);
+  rpc GetSuccessorFor(LookupRequest) returns (SuccessorReply);
+
+  // Ring bootstrap: circulate once around the ring before elections
+  rpc Bootstrap(BootToken) returns (Empty);
+
+  // Election (Chang–Roberts)
+  rpc Election(ElectionMsg) returns (Empty);
+  rpc Coordinator(CoordinatorMsg) returns (Empty);
+
+  // Peer exchange
+  rpc PeerList(Empty) returns (PeerListReply);
+}
