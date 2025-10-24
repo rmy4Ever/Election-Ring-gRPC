@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.RegistrationDemo;
-
+/*
+*Kevin Bolanavatu - S11198128
+*Maria Waqairatavo - S11174090
+*Salote Katia - S11196202
+*/
 import com.mycompany.RegistrationDemo.proto.Neighbor;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
