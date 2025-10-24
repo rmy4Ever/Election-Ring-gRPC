@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.RegistrationDemo;
 
-/**
- *
- * @author Kevin
- */
+/*
+*Kevin Bolanavatu - S11198128
+*Maria Waqairatavo - S11174090
+*Salote Katia - S11196202
+*/
+
+package com.mycompany.RegistrationDemo;
 
 import com.mycompany.RegistrationDemo.proto.*;
 import io.grpc.ManagedChannel;
