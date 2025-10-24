@@ -4,11 +4,6 @@
  */
 package com.mycompany.RegistrationDemo;
 
-/**
- *
- * @author Kevin
- */
-
 import com.mycompany.RegistrationDemo.proto.Neighbor;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
