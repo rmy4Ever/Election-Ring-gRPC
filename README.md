@@ -63,7 +63,7 @@ HOW TO RUN
 2. Run `RegistrationDemo.java`
 3. Type `all` → Leader = 30 (highest ID)
 
-Detailed Instruction:
+-Detailed Instruction:
 1. Start the Peer Register Server:
    - Run the main class responsible for registration (e.g., RegisterServer.java).
    - This server maintains the list of all peers and their addresses.
