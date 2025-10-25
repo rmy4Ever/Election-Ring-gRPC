@@ -6,8 +6,8 @@ TITLE : LCR Leader Election Protocol using gRPC
 
 
 **Student Names**:
-Kevin Bolanavatu
-Maria Waqairatavo 
+Kevin Bolanavatu,
+Maria Waqairatavo,
 Salote Katia 
 
 **ID**: 
